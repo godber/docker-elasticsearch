@@ -9,10 +9,10 @@ RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true 
 RUN apt-get install oracle-java7-installer -y
 
 # Comment this out if you want to create a container from your local build
-ADD https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.3.tar.gz /
-RUN tar xf elasticsearch-0.90.3.tar.gz
+ADD https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.9.tar.gz /
+RUN tar xf elasticsearch-0.90.9.tar.gz
 
 EXPOSE :9200
 
 # Start ElasticSearch
-CMD elasticsearch-0.90.3/bin/elasticsearch -f
+CMD elasticsearch-0.90.9/bin/elasticsearch -f
